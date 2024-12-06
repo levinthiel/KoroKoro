@@ -23,9 +23,13 @@ export default function Home() {
 }
 
 const Wrapper = styled.div`
+  margin: 0 auto;
   border: 2px solid white;
-  width: 750px;
-  height: 900px;
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+  max-width: 750px;
+  max-height: 900px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,9 +37,12 @@ const Wrapper = styled.div`
 
 const Egg = styled.div`
   border: 2px solid white;
+  background-color: green;
   border-radius: 60% 60% 40% 40%;
-  width: 600px;
-  height: 750px;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 750px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,6 +50,9 @@ const Egg = styled.div`
 
 const Screen = styled.div`
   border: 2px solid white;
-  width: 450px;
-  height: 400px;
+  background-color: yellow;
+  /* width: 100%;
+  height: 100%; */
+  min-width: 335px;
+  min-height: 447px;
 `
