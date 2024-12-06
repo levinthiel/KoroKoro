@@ -9,8 +9,8 @@ import styled from "styled-components";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <h1>KoroKoro</h1>
+    <>
+      {/* <h1>KoroKoro</h1> */}
       <Wrapper>
         <Egg>
           <Screen>
@@ -18,7 +18,7 @@ export default function Home() {
           </Screen>
        </Egg>
       </Wrapper>
-    </div>
+    </>
   );
 }
 
@@ -26,8 +26,8 @@ const Wrapper = styled.div`
   margin: 0 auto;
   border: 2px solid white;
   background-color: aquamarine;
-  width: 100%;
-  height: 100%;
+  min-width: 450px;
+  min-height: 600px;
   max-width: 750px;
   max-height: 900px;
   display: flex;
@@ -39,10 +39,10 @@ const Egg = styled.div`
   border: 2px solid white;
   background-color: green;
   border-radius: 60% 60% 40% 40%;
-  width: 100%;
-  height: 100%;
-  max-width: 600px;
-  max-height: 750px;
+  width: 450px;
+  height: 600px;
+  /* max-width: 600px;
+  max-height: 750px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,6 +53,6 @@ const Screen = styled.div`
   background-color: yellow;
   /* width: 100%;
   height: 100%; */
-  min-width: 335px;
-  min-height: 447px;
+  min-width: 275px;
+  min-height: 367px;
 `
