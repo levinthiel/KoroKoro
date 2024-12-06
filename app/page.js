@@ -13,31 +13,30 @@ export default function Home() {
       {/* <h1>KoroKoro</h1> */}
       <Wrapper>
         <Egg>
-          <Screen>
-            
-          </Screen>
+          <Screen/>
        </Egg>
       </Wrapper>
     </>
   );
 }
 
+// FIXME: the styling applied here makes the egg responsive only to I Phone SE
+// TODO: improve styling to ensure basic mobile reponsiveness
 const Wrapper = styled.div`
   margin: 0 auto;
   border: 2px solid white;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   min-width: 450px;
-  min-height: 600px;
-  max-width: 750px;
-  max-height: 900px;
+  min-height: 667px;
+  width: 1000px;
+  /* height: 900px; */
   display: flex;
   align-items: center;
   justify-content: center;
 `;
 
 const Egg = styled.div`
-  border: 2px solid white;
-  background-color: green;
+  background: url("./egg.png") center center;
   border-radius: 60% 60% 40% 40%;
   width: 450px;
   height: 600px;
@@ -50,9 +49,10 @@ const Egg = styled.div`
 
 const Screen = styled.div`
   border: 2px solid white;
-  background-color: yellow;
+  background-color: #A8C64E; // closer to color of LCS screen
   /* width: 100%;
   height: 100%; */
-  min-width: 275px;
-  min-height: 367px;
+  min-width: 325px;
+  min-height: 335px;
+  border-radius: 15px;
 `
