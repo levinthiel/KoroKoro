@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export default function OpeningCinematicPage() {
+    
     return(
         <Wrapper>
             <MovieDisplay/>
@@ -11,13 +12,9 @@ export default function OpeningCinematicPage() {
         <LinkWrapper>
             <Link href=".">back to home</Link>
         </LinkWrapper>
-
       </Wrapper>
-
-
     )
 }
-
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -35,7 +32,7 @@ const MovieDisplay = styled.div`
   border: 2px solid green;
   width: 600px;
   height: 370px;
-  background-color: #A8C64E; // closer to color of LCD screen 
+  background-color: #A8C64E; // resembles color of LCD screen 
 `;
 
 const TextBox = styled.div`

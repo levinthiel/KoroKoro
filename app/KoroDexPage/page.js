@@ -5,14 +5,13 @@ import Link from "next/link";
 
 export default function KoroDexPage() {
 
-
     return(
       <>
         <Egg>
           <Screen/>
        </Egg>
        <LinkWrapper>
-       <Link href=".">back to home</Link>
+         <Link href=".">back to home</Link>
        </LinkWrapper>
        </>
     );
@@ -23,8 +22,6 @@ const Egg = styled.div`
   border-radius: 60% 60% 40% 40%;
   width: 450px;
   height: 600px;
-  /* max-width: 600px;
-  max-height: 750px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,9 +29,7 @@ const Egg = styled.div`
 
 const Screen = styled.div`
   border: 2px solid white;
-  background-color: #A8C64E; // closer to color of LCD screen 
-  /* width: 100%;
-  height: 100%; */
+  background-color: #A8C64E; // resembles color of LCD screen 
   min-width: 325px;
   min-height: 335px;
   border-radius: 15px;
