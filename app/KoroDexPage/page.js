@@ -32,7 +32,7 @@ const Egg = styled.div`
 
 const Screen = styled.div`
   border: 2px solid white;
-  background-color: #A8C64E; // closer to color of LCS screen
+  background-color: #A8C64E; // closer to color of LCD screen 
   /* width: 100%;
   height: 100%; */
   min-width: 325px;

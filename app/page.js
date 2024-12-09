@@ -21,6 +21,9 @@ export default function Home() {
       <IntroScreen2>game logo</IntroScreen2>
       <IntroScreen3>
         <Link href="./KoroDexPage">KoroDexPage</Link>
+        <br/>
+        <br/>
+        <Link href="./OpeningCinematicPage">Opening Movie</Link>
       </IntroScreen3>
         {/* <KoroDexPage/> */}
       </Wrapper>
