@@ -41,6 +41,8 @@ const IntroScreen1 = styled.div`
   animation-name: example1;
   animation-duration: 4s;
   transition: all ease-in-out 0.3s;
+  position: absolute;
+  margin: auto;
 
   @keyframes example1 {
   0%   {opacity: 0;}
@@ -59,6 +61,8 @@ const IntroScreen2 = styled.div`
   animation-name: example2;
   animation-duration: 4s;
   animation-delay: 4s;
+  position: absolute;
+  margin: auto;
   animation-fill-mode: forwards;
 
   @keyframes example2 {
@@ -70,14 +74,16 @@ const IntroScreen2 = styled.div`
 `
 
 const IntroScreen3 = styled.div`
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   opacity: 0;
   background-color: blue;
   position: relative;
   animation-name: example3;
   animation-duration: 1s;
   animation-delay: 8s;
+  position: absolute;
+  margin: auto;
   animation-fill-mode: forwards;
 
   @keyframes example3 {
