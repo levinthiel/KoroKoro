@@ -2,14 +2,30 @@
 
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <Wrapper>
-      <IntroScreen1>studio logo</IntroScreen1>
-      <IntroScreen2>game logo</IntroScreen2>
+      <IntroScreen1>
+        <Image
+          src={"/spacearcadialogo.png"} // /Users/stephanmodel/projects/korokoro/public/spacearcadialogo.png
+          width={300}
+          height={300}
+          alt="space arcadia logo"
+        />
+      </IntroScreen1>
+      <IntroScreen2>
+      <Image
+          src={"/korokorologo.png"} // /Users/stephanmodel/projects/korokoro/public/korokorologo.png
+          width={300}
+          height={300}
+          alt="korokoro logo"
+        />
+      </IntroScreen2>
       <IntroScreen3>
+        <br/>
         <Link href="./KoroDexPage">KoroDexPage</Link>
         <br/>
         <br/>
@@ -22,6 +38,7 @@ export default function Home() {
 
 
 const Wrapper = styled.div`
+  background-color: #000;
   margin: 0 auto;
   border: 2px solid white;
   min-width: 450px;
@@ -33,10 +50,7 @@ const Wrapper = styled.div`
 `;
 
 const IntroScreen1 = styled.div`
-  width: 100px;
-  height: 100px;
   opacity: 0;
-  background-color: red;
   position: relative;
   animation-name: example1;
   animation-duration: 4s;
@@ -53,10 +67,7 @@ const IntroScreen1 = styled.div`
 `
 
 const IntroScreen2 = styled.div`
-  width: 100px;
-  height: 100px;
   opacity: 0;
-  background-color: green;
   position: relative;
   animation-name: example2;
   animation-duration: 4s;
