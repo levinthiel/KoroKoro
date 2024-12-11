@@ -6,19 +6,29 @@ import Link from "next/link";
 export default function KoroDexPage() {
 
     return(
-      <>
+      <Wrapper>
         <Egg>
           <ScreenShadow>
           <Screen/>
           </ScreenShadow>
-       </Egg>
-       <LinkWrapper>
-         <Link href=".">back to home</Link>
-       </LinkWrapper>
-       </>
+        </Egg>
+        <LinkWrapper>
+          <Link href=".">back to home</Link>
+        </LinkWrapper>
+      </Wrapper>
     );
 }
-
+const Wrapper = styled.div`
+  margin: 0 auto;
+  border: 2px solid white;
+  min-width: 450px;
+  min-height: 667px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 const Egg = styled.div`
   background: radial-gradient(circle at 33% 15%, #fffdf8 1px, #f9edf3 2%, #d783b1 63%, #000000 100%);
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
@@ -50,6 +60,4 @@ const LinkWrapper = styled.div`
   border: 2px solid grey;
   border-radius: 20px;
   padding: 5px;
-  position: absolute;
-  top: 600px
 `

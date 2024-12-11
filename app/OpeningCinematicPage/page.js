@@ -9,12 +9,12 @@ export default function OpeningCinematicPage() {
         <Wrapper>
             <MovieDisplay/>
             <TextBox>
-              <NextTxt> &#11208; </NextTxt>
+              <NextTxtButton> &#11208; </NextTxtButton>
               <p>
               In the vast expanse of the universe, there exists a cluster of shimmering nebulas ... 
-              <br/>
-              <br/>
-              <br/>
+              </p>
+              
+              <p>
               known as the Hikaru Stellar Hatchery—a birthplace of mysterious, sentient life forms called Korokoro.
               </p>
               
@@ -66,7 +66,7 @@ const TextBox = styled.div`
     background-size: cover;
   }
 `;
-const NextTxt = styled.button`
+const NextTxtButton = styled.button`
   border: none;
   background: #639B85;
   position: absolute;
@@ -81,6 +81,7 @@ const NextTxt = styled.button`
     100%{opacity: 1;}
     }
 `;
+
 const LinkWrapper = styled.div`
   color: green;
   background-color: white;
