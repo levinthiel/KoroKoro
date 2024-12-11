@@ -8,7 +8,12 @@ export default function OpeningCinematicPage() {
     return(
         <Wrapper>
             <MovieDisplay/>
-            <TextBox/>
+            <TextBox>
+              <p>
+              In the vast expanse of the universe, there exists a cluster of shimmering nebulas 
+              known as the Hikaru Stellar Hatchery—a birthplace of mysterious, sentient life forms called Korokoro.
+              </p>
+            </TextBox>
         <LinkWrapper>
             <Link href=".">back to home</Link>
         </LinkWrapper>
@@ -21,7 +26,7 @@ const Wrapper = styled.div`
   border: 2px solid white;
   min-width: 450px;
   min-height: 667px;
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,9 +41,14 @@ const MovieDisplay = styled.div`
 `;
 
 const TextBox = styled.div`
-  border: 2px solid red;
-  width: 600px;
-  height: 170px;
+    border: 2px solid red;
+    width: 100vw;
+    height: 170px;
+    min-width: 375px;
+    max-width: 600px;
+    padding: 20px;
+    overflow: hidden;
+    line-height: 20px;
 `;
 
 const LinkWrapper = styled.div`
@@ -47,6 +57,4 @@ const LinkWrapper = styled.div`
   border: 2px solid grey;
   border-radius: 20px;
   padding: 5px;
-  position: absolute;
-  top: 600px
 `;
