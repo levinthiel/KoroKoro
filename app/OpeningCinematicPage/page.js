@@ -56,6 +56,7 @@ const TextBox = styled.div`
     
   @media only screen and (max-width: 400px) {
     background: url(/ui375.png) center no-repeat;
+    background-size: cover;
   }
 `;
 
