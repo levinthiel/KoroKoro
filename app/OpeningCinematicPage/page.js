@@ -34,15 +34,17 @@ const Wrapper = styled.div`
 `;
 
 const MovieDisplay = styled.div`
-  border: 2px solid green;
-  width: 600px;
+  width: 100vw;
   height: 370px;
-  background: #A8C64E url(/space1.jpg) center no-repeat;
+  background: url(/space1.jpg) center no-repeat;
   background-size: cover;
+  max-width: 600px;
+  min-width: 375px;
+  border-radius: 7px;
 `;
 
 const TextBox = styled.div`
-    background: #A8C64E url(/ui1.jpg) center no-repeat;
+    background: url(/ui600.png) center no-repeat;
     width: 100vw;
     height: 170px;
     min-width: 375px;
@@ -51,6 +53,10 @@ const TextBox = styled.div`
     overflow: hidden;
     line-height: 20px;
     background-size: 100% 100%;
+    
+  @media only screen and (max-width: 400px) {
+    background: url(/ui375.png) center no-repeat;
+  }
 `;
 
 const LinkWrapper = styled.div`
