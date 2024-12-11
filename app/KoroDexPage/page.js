@@ -8,7 +8,9 @@ export default function KoroDexPage() {
     return(
       <>
         <Egg>
+          <ScreenShadow>
           <Screen/>
+          </ScreenShadow>
        </Egg>
        <LinkWrapper>
          <Link href=".">back to home</Link>
@@ -27,14 +29,18 @@ const Egg = styled.div`
   align-items: center;
   justify-content: center;
 `
-
+const ScreenShadow = styled.div`
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) ;
+  border-radius: 15px;
+`;
 const Screen = styled.div`
-  border: 2px solid white;
+  border: 2px solid #1e1e1e;
   background-color: #A8C64E; // resembles color of LCD screen 
   min-width: 325px;
   min-height: 335px;
   border-radius: 15px;
-`
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
+`;
 
 const LinkWrapper = styled.div`
   color: green;
