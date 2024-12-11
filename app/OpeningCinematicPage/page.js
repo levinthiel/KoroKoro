@@ -37,18 +37,20 @@ const MovieDisplay = styled.div`
   border: 2px solid green;
   width: 600px;
   height: 370px;
-  background-color: #A8C64E; // resembles color of LCD screen 
+  background: #A8C64E url(/space1.jpg) center no-repeat;
+  background-size: cover;
 `;
 
 const TextBox = styled.div`
-    border: 2px solid red;
+    background: #A8C64E url(/ui1.jpg) center no-repeat;
     width: 100vw;
     height: 170px;
     min-width: 375px;
     max-width: 600px;
-    padding: 20px;
+    padding: 27px 27px;
     overflow: hidden;
     line-height: 20px;
+    background-size: 100% 100%;
 `;
 
 const LinkWrapper = styled.div`
