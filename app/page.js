@@ -43,10 +43,12 @@ const Wrapper = styled.div`
   border: 2px solid white;
   min-width: 450px;
   min-height: 667px;
-  width: 1000px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
 `;
 
 const IntroScreen1 = styled.div`

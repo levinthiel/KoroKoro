@@ -19,8 +19,9 @@ export default function KoroDexPage() {
 
 const Egg = styled.div`
   background: url("./egg.png") center center;
-  border-radius: 60% 60% 40% 40%;
+  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
   width: 450px;
+  min-width: 450px;
   height: 600px;
   display: flex;
   align-items: center;
