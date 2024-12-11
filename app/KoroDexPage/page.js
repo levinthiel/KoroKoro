@@ -20,15 +20,17 @@ export default function KoroDexPage() {
 }
 
 const Egg = styled.div`
-  background: url("./egg.png") center center;
-  border-radius:50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: radial-gradient(circle at 33% 15%, #fffdf8 1px, #f9edf3 2%, #d783b1 63%, #000000 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   width: 450px;
   min-width: 450px;
   height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
-`
+  box-shadow: -30px -30px 55px rgba(0, 0, 0, 0.5) inset;
+  border: 1px solid #000;
+`;
 const ScreenShadow = styled.div`
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) ;
   border-radius: 15px;
