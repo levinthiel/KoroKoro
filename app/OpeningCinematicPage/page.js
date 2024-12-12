@@ -60,6 +60,8 @@ const TextBox = styled.div`
     line-height: 20px;
     background-size: 100% 100%;
     position: relative;
+    display: flex;
+    align-items: center;
     
   @media only screen and (max-width: 400px) {
     background: url(/ui375.png) center no-repeat;
