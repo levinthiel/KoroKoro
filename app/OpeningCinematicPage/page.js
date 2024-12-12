@@ -8,7 +8,18 @@ export default function OpeningCinematicPage() {
     return(
         <Wrapper>
             <MovieDisplay/>
-            <TextBox/>
+            <TextBox>
+              <NextTxtButton> &#11208; </NextTxtButton>
+              <p>
+              In the vast expanse of the universe, there exists a cluster of shimmering nebulas ... 
+              </p>
+              
+              <p>
+              known as the Hikaru Stellar Hatchery—a birthplace of mysterious, sentient life forms called Korokoro.
+              </p>
+              
+            </TextBox>
+
         <LinkWrapper>
             <Link href=".">back to home</Link>
         </LinkWrapper>
@@ -21,7 +32,7 @@ const Wrapper = styled.div`
   border: 2px solid white;
   min-width: 450px;
   min-height: 667px;
-  width: 1000px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,16 +40,48 @@ const Wrapper = styled.div`
 `;
 
 const MovieDisplay = styled.div`
-  border: 2px solid green;
-  width: 600px;
+  width: 100vw;
   height: 370px;
-  background-color: #A8C64E; // resembles color of LCD screen 
+  background: url(/space1.jpg) center no-repeat;
+  background-size: cover;
+  max-width: 600px;
+  min-width: 375px;
+  border-radius: 7px;
 `;
 
 const TextBox = styled.div`
-  border: 2px solid red;
-  width: 600px;
-  height: 170px;
+    background: url(/ui600.png) center no-repeat;
+    width: 100vw;
+    height: 170px;
+    min-width: 375px;
+    max-width: 600px;
+    padding: 27px 27px;
+    overflow: hidden;
+    line-height: 20px;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+  @media only screen and (max-width: 400px) {
+    background: url(/ui375.png) center no-repeat;
+    background-size: cover;
+  }
+`;
+const NextTxtButton = styled.button`
+  border: none;
+  background: #639B85;
+  position: absolute;
+  right: 12px;
+  top: 130px;
+  padding: 5px 9px;
+  border-radius: 7px;
+  animation: blink 1s infinite ease-in-out;
+  @keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
 `;
 
 const LinkWrapper = styled.div`
@@ -47,6 +90,4 @@ const LinkWrapper = styled.div`
   border: 2px solid grey;
   border-radius: 20px;
   padding: 5px;
-  position: absolute;
-  top: 600px
 `;
