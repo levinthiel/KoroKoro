@@ -32,7 +32,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 const Egg = styled.div`
-  background: radial-gradient(circle at 33% 15%, #fffdf8 1px, #f9edf3 2%, #d783b1 63%, #000000 100%);
+  background: radial-gradient(circle at 33% 15%, #fffdf8 1px, #f9edf3 2%, #89b0d1 40%, #5898cd 63%, #000000 100%);
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
   width: 450px;
   min-width: 450px;
