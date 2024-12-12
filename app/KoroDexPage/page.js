@@ -9,7 +9,9 @@ export default function KoroDexPage() {
       <Wrapper>
         <Egg>
           <ScreenShadow>
-          <Screen/>
+          <ScreenBezel>
+            <Screen></Screen>
+          </ScreenBezel>
           </ScreenShadow>
         </Egg>
         <LinkWrapper>
@@ -42,18 +44,23 @@ const Egg = styled.div`
   border: 1px solid #000;
 `;
 const ScreenShadow = styled.div`
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3) ;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+`;
+const ScreenBezel = styled.div`
+  background-color: #A8C64E; 
   border-radius: 15px;
+  box-shadow: 0 0 1px 3px rgba(10, 10, 10, 0.7);
 `;
 const Screen = styled.div`
-  border: 2px solid #1e1e1e;
-  background-color: #A8C64E; // resembles color of LCD screen 
-  min-width: 325px;
-  min-height: 335px;
+  display: block;
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.3);
+  width: 280px;
+  height: 280px;
   border-radius: 15px;
-  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, .4), inset -2px -2px 2px rgba(0, 0, 0, .4);
 `;
-
 const LinkWrapper = styled.div`
   color: green;
   background-color: white;
