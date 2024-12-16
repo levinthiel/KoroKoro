@@ -9,7 +9,7 @@ export default function OpeningCinematicPage() {
         <Wrapper>
             <MovieDisplay/>
             <TextBox>
-              <NextTxtButton> &#11208; </NextTxtButton>
+              <NextTxtButton>  </NextTxtButton>
               <p>
               In the vast expanse of the universe, there exists a cluster of shimmering nebulas ... 
               </p>
@@ -70,12 +70,12 @@ const TextBox = styled.div`
 `;
 const NextTxtButton = styled.button`
   border: none;
-  background: #639B85;
+  background: url(/arrow.png) no-repeat;
   position: absolute;
+  width:28px;
+  height: 24px;
   right: 12px;
   top: 130px;
-  padding: 5px 9px;
-  border-radius: 7px;
   animation: blink 1s infinite ease-in-out;
   @keyframes blink{
     0%{opacity: 0;}
