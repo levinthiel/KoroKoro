@@ -14,9 +14,9 @@ export default function OpeningCinematicPage() {
               In the vast expanse of the universe, there exists a cluster of shimmering nebulas ... 
               </p>
               
-              <p>
+              {/* <p>
               known as the Hikaru Stellar Hatchery—a birthplace of mysterious, sentient life forms called Korokoro.
-              </p>
+              </p> */}
               
             </TextBox>
 
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
 const MovieDisplay = styled.div`
   width: 100vw;
   height: 370px;
-  background: url(/space1.jpg) center no-repeat;
+  background: url(/space1-600.png) center no-repeat;
   background-size: cover;
   max-width: 600px;
   min-width: 375px;
@@ -50,7 +50,7 @@ const MovieDisplay = styled.div`
 `;
 
 const TextBox = styled.div`
-    background: url(/ui600.png) center no-repeat;
+    background: url(/ui-600.png) center no-repeat;
     width: 100vw;
     height: 170px;
     min-width: 375px;
@@ -64,7 +64,7 @@ const TextBox = styled.div`
     align-items: center;
     
   @media only screen and (max-width: 400px) {
-    background: url(/ui375.png) center no-repeat;
+    background: url(/ui-375.png) center no-repeat;
     background-size: cover;
   }
 `;
