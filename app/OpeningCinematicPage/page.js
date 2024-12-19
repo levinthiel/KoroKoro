@@ -9,7 +9,7 @@ export default function OpeningCinematicPage() {
         <Wrapper>
             <MovieDisplay/>
             <TextBox>
-              <NextTxtButton>  </NextTxtButton>
+              <TextBoxButton >  </TextBoxButton>
               <p>
               In the vast expanse of the universe, there exists a cluster of shimmering nebulas ... 
               </p>
@@ -68,7 +68,7 @@ const TextBox = styled.div`
     background-size: cover;
   }
 `;
-const NextTxtButton = styled.button`
+const TextBoxButton  = styled.button`
   border: none;
   background: url(/arrow.png) no-repeat;
   position: absolute;
