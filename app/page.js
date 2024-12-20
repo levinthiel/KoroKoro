@@ -29,7 +29,7 @@ export default function Home() {
           <Link href="./KoroDexPage">KoroDexPage</Link>
           <br />
           <br />
-          <Link href="./OpeningCinematicPage">Opening Movie</Link>
+          <Link href="./OpeningScenePage">Opening Scene</Link>
         </TitleScreen>
       </Wrapper>
     </>
