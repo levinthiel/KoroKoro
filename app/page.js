@@ -10,7 +10,7 @@ export default function Home() {
       <Wrapper>
         <SplashScreen1>
           <Image
-            src={"/spacearcadialogo.png"} // /Users/stephanmodel/projects/korokoro/public/spacearcadialogo.png
+            src={"/spacearcadialogo.png"}
             width={300}
             height={300}
             alt="space arcadia logo"
@@ -18,7 +18,7 @@ export default function Home() {
         </SplashScreen1>
         <SplashScreen2>
           <Image
-            src={"/korokorologo.png"} // /Users/stephanmodel/projects/korokoro/public/korokorologo.png
+            src={"/korokorologo.png"}
             width={300}
             height={300}
             alt="korokoro logo"
