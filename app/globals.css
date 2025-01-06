@@ -1,6 +1,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /*KoroKoro*/
+  --koro-blue: #89b0d1;
+  --koro-pink: #d783b1;
+  --koro-pink-dark: #af6c90;
+  --koro-pink-light: #f9edf3;
+  --koro-beige-light: #fffdf8;
+  --koro-black: #0e0e0e; 
+  /*Screen-Display*/
+  --screen-dark: #20414d;
+  --screen-middle-dark: #639b85;
+  --screen-middle-light: #b5dca1;
+  --screen-light: #f0fee7;
 }
 
 @media (prefers-color-scheme: dark) {
