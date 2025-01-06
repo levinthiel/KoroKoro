@@ -1,4 +1,4 @@
-export const notes = [
+export const scenes = [
     {
         id:1,
         name:"scene1",
