@@ -1,5 +1,5 @@
 "use client";
-
+import { scenes } from "../lib/data";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -9,14 +9,14 @@ export default function OpeningScenePage() {
       <SceneDisplay />
       <TextBox>
         <TextBoxButton />
-        <p>
+        <Textpart1>
           In the vast expanse of the universe, there exists a cluster of
           shimmering nebulas ...
-        </p>
+        </Textpart1>
 
-        {/* <p>
+        <Textpart2>
               known as the Hikaru Stellar Hatchery—a birthplace of mysterious, sentient life forms called Korokoro.
-              </p> */}
+        </Textpart2>
       </TextBox>
 
       <LinkWrapper>
@@ -88,7 +88,11 @@ const TextBoxButton = styled.button`
     }
   }
 `;
-
+const Textpart1 = styled.p`
+`;
+const Textpart2 = styled.p`
+  display: none;
+`;
 const LinkWrapper = styled.div`
   color: green;
   background-color: white;
