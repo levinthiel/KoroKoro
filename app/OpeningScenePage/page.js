@@ -95,7 +95,7 @@ const TextBoxButton = styled.button`
   height: 24px;
   right: 12px;
   top: 130px;
-  /* animation: blink 1s infinite ease-in-out;
+  animation: blink 1s infinite ease-in-out;
   @keyframes blink {
     0% {
       opacity: 0;
@@ -106,7 +106,7 @@ const TextBoxButton = styled.button`
     100% {
       opacity: 1;
     }
-  } */
+  }
 `;
 const LinkWrapper = styled.div`
   color: green;
