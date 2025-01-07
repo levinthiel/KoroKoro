@@ -30,11 +30,13 @@ export default function OpeningScenePage() {
         <TextBox  key={scene.id}>
           {showFirstPart ? ( 
             <>
-            <TextPart text={scene.textpart1}/><TextBoxButton onClick={toggleTextPart} />
+              <TextPart text={scene.textpart1}/>
+              <TextBoxButton onClick={toggleTextPart} />
             </>
           ) : (
-          <>
-            <TextPart text={scene.textpart2}/> <TextBoxButton onClick={sceneCounter} />
+            <>
+              <TextPart text={scene.textpart2}/>
+              <TextBoxButton onClick={sceneCounter} />
             </>
           )}
         </TextBox>
