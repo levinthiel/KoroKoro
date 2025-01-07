@@ -1,24 +1,39 @@
 "use client";
-import { scenes } from "../lib/data";
+import { scenes as initialScenes } from "../lib/data";
 import styled from "styled-components";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function OpeningScenePage() {
+
+  const [scenes,setScenes] = useState(initialScenes)
+  
+  let sceneId = 0
+
+  function setSceneId() {
+    if (sceneId<7){
+      sceneId++
+      console.log(sceneId)
+    }else {
+    }
+    
+  }
+
+
   return (
     <Wrapper>
-      <SceneDisplay />
-      <TextBox>
-        <TextBoxButton />
-        <Textpart1>
-          In the vast expanse of the universe, there exists a cluster of
-          shimmering nebulas ...
-        </Textpart1>
-
-        <Textpart2>
-              known as the Hikaru Stellar Hatchery—a birthplace of mysterious, sentient life forms called Korokoro.
-        </Textpart2>
+      <SceneDisplay /><TextBoxButton onClick={setSceneId}/>
+      {[scenes[sceneId]].map((scene) => ( 
+        <TextBox  key={scene.id}>
+        
+            <Textpart1>
+              {scene.textpart1}  {/* {scene.textpart2} */}
+            </Textpart1>
+{/*         <Textpart2>
+              {scene.textpart2}
+            </Textpart2> */}
       </TextBox>
-
+      ))}
       <LinkWrapper>
         <Link href=".">back to home</Link>
       </LinkWrapper>
@@ -75,7 +90,7 @@ const TextBoxButton = styled.button`
   height: 24px;
   right: 12px;
   top: 130px;
-  animation: blink 1s infinite ease-in-out;
+  /* animation: blink 1s infinite ease-in-out;
   @keyframes blink {
     0% {
       opacity: 0;
@@ -86,7 +101,7 @@ const TextBoxButton = styled.button`
     100% {
       opacity: 1;
     }
-  }
+  } */
 `;
 const Textpart1 = styled.p`
 `;
