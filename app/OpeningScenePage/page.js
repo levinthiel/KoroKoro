@@ -1,38 +1,35 @@
 "use client";
-import { scenes as initialScenes } from "../lib/data";
+import { scenes } from "../lib/data";
 import styled from "styled-components";
 import Link from "next/link";
+import TextPart from "../components/Texpart";
 import { useState } from "react";
 
 export default function OpeningScenePage() {
-
-  const [scenes,setScenes] = useState(initialScenes)
   
-  let sceneId = 0
+  const [sceneId, setSceneId] = useState(0);
 
-  function setSceneId() {
-    if (sceneId<7){
-      sceneId++
-      console.log(sceneId)
-    }else {
-    }
-    
-  }
+  function SceneCounter(){
+     if (sceneId<7){
+      setSceneId(sceneId+1)
+      console.log("Scene: ",sceneId)
+      console.log([scenes[sceneId]])
+    }else {}
+  } 
 
+  const scenesToMap= [scenes[sceneId]]
 
   return (
     <Wrapper>
-      <SceneDisplay /><TextBoxButton onClick={setSceneId}/>
-      {[scenes[sceneId]].map((scene) => ( 
+      <SceneDisplay /><TextBoxButton onClick={SceneCounter} />
+      {scenesToMap.map((scene) => ( 
         <TextBox  key={scene.id}>
-        
-            <Textpart1>
-              {scene.textpart1}  {/* {scene.textpart2} */}
-            </Textpart1>
+          <TextPart text={scene.textpart1}/>
+                {/* {scene.textpart2} */}
 {/*         <Textpart2>
               {scene.textpart2}
             </Textpart2> */}
-      </TextBox>
+        </TextBox>
       ))}
       <LinkWrapper>
         <Link href=".">back to home</Link>
@@ -102,11 +99,6 @@ const TextBoxButton = styled.button`
       opacity: 1;
     }
   } */
-`;
-const Textpart1 = styled.p`
-`;
-const Textpart2 = styled.p`
-  display: none;
 `;
 const LinkWrapper = styled.div`
   color: green;
