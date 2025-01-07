@@ -8,27 +8,35 @@ import { useState } from "react";
 export default function OpeningScenePage() {
   
   const [sceneId, setSceneId] = useState(0);
+  const [showFirstPart, setShowFirstPart] = useState(true);
 
-  function SceneCounter(){
-     if (sceneId<7){
-      setSceneId(sceneId+1)
-      console.log("Scene: ",sceneId)
-      console.log([scenes[sceneId]])
-    }else {}
-  } 
+  function sceneCounter() {
+    if (sceneId < scenes.length - 1) {
+        setSceneId(sceneId + 1);
+        setShowFirstPart(true); 
+      }
+    }
+
+  function toggleTextPart() {
+    setShowFirstPart(false); 
+  }
 
   const scenesToMap= [scenes[sceneId]]
 
   return (
     <Wrapper>
-      <SceneDisplay /><TextBoxButton onClick={SceneCounter} />
+      <SceneDisplay />
       {scenesToMap.map((scene) => ( 
         <TextBox  key={scene.id}>
-          <TextPart text={scene.textpart1}/>
-                {/* {scene.textpart2} */}
-{/*         <Textpart2>
-              {scene.textpart2}
-            </Textpart2> */}
+          {showFirstPart ? ( 
+            <>
+            <TextPart text={scene.textpart1}/><TextBoxButton onClick={toggleTextPart} />
+            </>
+          ) : (
+          <>
+            <TextPart text={scene.textpart2}/> <TextBoxButton onClick={sceneCounter} />
+            </>
+          )}
         </TextBox>
       ))}
       <LinkWrapper>
