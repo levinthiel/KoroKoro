@@ -20,7 +20,7 @@ export default function OpeningScenePage() {
         <>
           <SceneDisplay backgroundimage={scene.imagesource} />
           <TextBox key={scene.id}>
-            <TextPart text={scene.textpart} />
+            <p>{scene.textpart}</p>
             <TextBoxButton onClick={() => sceneCounter()} />
           </TextBox>
         </>
