@@ -8,24 +8,29 @@ import { useState } from "react";
 export default function OpeningScenePage() {
   
   const [sceneId, setSceneId] = useState(0);
+  const [backgroundimage, setbackgroundImage] = useState("/space1-600.png"); // backgroundimage needs to stay lowercase. otherwise errors occurs
   const [showFirstPart, setShowFirstPart] = useState(true);
 
-  function sceneCounter() {
+  function sceneCounter(background) {
     if (sceneId < scenes.length - 1) {
         setSceneId(sceneId + 1);
         setShowFirstPart(true); 
+        setbackgroundImage(background);
+        console.log("scene", sceneId)
+        console.log("firstpart", showFirstPart)
       }
     }
 
   function toggleTextPart() {
     setShowFirstPart(false); 
+    console.log("firstpart", showFirstPart)
   }
 
   const scenesToMap= [scenes[sceneId]]
 
   return (
     <Wrapper>
-      <SceneDisplay />
+      <SceneDisplay backgroundimage={backgroundimage}  />
       {scenesToMap.map((scene) => ( 
         <TextBox  key={scene.id}>
           {showFirstPart ? ( 
@@ -36,7 +41,7 @@ export default function OpeningScenePage() {
           ) : (
             <>
               <TextPart text={scene.textpart2}/>
-              <TextBoxButton onClick={sceneCounter} />
+              <TextBoxButton onClick={sceneCounter(scene.imagesource)} />
             </>
           )}
         </TextBox>
@@ -63,7 +68,7 @@ const Wrapper = styled.div`
 const SceneDisplay = styled.div`
   width: 100vw;
   height: 370px;
-  background: url(/space1-600.png) center no-repeat;
+  background:  ${({ backgroundimage }) => `url(${backgroundimage})`} center no-repeat;
   background-size: cover;
   max-width: 600px;
   min-width: 375px;
