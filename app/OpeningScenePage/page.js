@@ -8,43 +8,26 @@ import { useState } from "react";
 export default function OpeningScenePage() {
   
   const [sceneId, setSceneId] = useState(0);
-  const [backgroundimage, setbackgroundImage] = useState("/space1-600.png"); // backgroundimage needs to stay lowercase. otherwise errors occurs
-  const [showFirstPart, setShowFirstPart] = useState(true);
+  const scenesToMap= [scenes[sceneId]]
 
-  function sceneCounter(background) {
+  function sceneCounter() {
     if (sceneId < scenes.length - 1) {
         setSceneId(sceneId + 1);
-        setShowFirstPart(true); 
-        setbackgroundImage(background);
-        console.log("scene", sceneId)
-        console.log("firstpart", showFirstPart)
       }
     }
 
-  function toggleTextPart() {
-    setShowFirstPart(false); 
-    console.log("firstpart", showFirstPart)
-  }
 
-  const scenesToMap= [scenes[sceneId]]
 
   return (
     <Wrapper>
-      <SceneDisplay backgroundimage={backgroundimage}  />
       {scenesToMap.map((scene) => ( 
+       <>
+        <SceneDisplay backgroundimage={scene.imagesource} />
         <TextBox  key={scene.id}>
-          {showFirstPart ? ( 
-            <>
-              <TextPart text={scene.textpart1}/>
-              <TextBoxButton onClick={toggleTextPart} />
-            </>
-          ) : (
-            <>
-              <TextPart text={scene.textpart2}/>
-              <TextBoxButton onClick={sceneCounter(scene.imagesource)} />
-            </>
-          )}
+              <TextPart text={scene.textpart}/>
+              <TextBoxButton onClick={() => sceneCounter()} />
         </TextBox>
+        </> 
       ))}
       <LinkWrapper>
         <Link href=".">back to home</Link>
@@ -73,6 +56,7 @@ const SceneDisplay = styled.div`
   max-width: 600px;
   min-width: 375px;
   border-radius: 7px;
+  border: solid 2px var(--screen-middle-dark);
 `;
 
 const TextBox = styled.div`
@@ -95,6 +79,7 @@ const TextBox = styled.div`
   }
 `;
 const TextBoxButton = styled.button`
+  cursor: pointer;
   border: none;
   background: url(/arrow.png) no-repeat;
   position: absolute;
