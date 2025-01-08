@@ -2,32 +2,28 @@
 import { scenes } from "../lib/data";
 import styled from "styled-components";
 import Link from "next/link";
-import TextPart from "../components/Texpart";
 import { useState } from "react";
 
 export default function OpeningScenePage() {
-  
   const [sceneId, setSceneId] = useState(0);
-  const scenesToMap= [scenes[sceneId]]
+  const scenesToMap = [scenes[sceneId]];
 
   function sceneCounter() {
     if (sceneId < scenes.length - 1) {
-        setSceneId(sceneId + 1);
-      }
+      setSceneId(sceneId + 1);
     }
-
-
+  }
 
   return (
     <Wrapper>
-      {scenesToMap.map((scene) => ( 
-       <>
-        <SceneDisplay backgroundimage={scene.imagesource} />
-        <TextBox  key={scene.id}>
-              <TextPart text={scene.textpart}/>
-              <TextBoxButton onClick={() => sceneCounter()} />
-        </TextBox>
-        </> 
+      {scenesToMap.map((scene) => (
+        <>
+          <SceneDisplay backgroundimage={scene.imagesource} />
+          <TextBox key={scene.id}>
+            <TextPart text={scene.textpart} />
+            <TextBoxButton onClick={() => sceneCounter()} />
+          </TextBox>
+        </>
       ))}
       <LinkWrapper>
         <Link href=".">back to home</Link>
@@ -51,7 +47,8 @@ const Wrapper = styled.div`
 const SceneDisplay = styled.div`
   width: 100vw;
   height: 370px;
-  background:  ${({ backgroundimage }) => `url(${backgroundimage})`} center no-repeat;
+  background: ${({ backgroundimage }) => `url(${backgroundimage})`} center
+    no-repeat;
   background-size: cover;
   max-width: 600px;
   min-width: 375px;
