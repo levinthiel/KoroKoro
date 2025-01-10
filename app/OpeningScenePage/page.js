@@ -17,13 +17,13 @@ export default function OpeningScenePage() {
   return (
     <Wrapper>
       {scenesToMap.map((scene) => (
-        <>
+        <section key={scene.id}>
           <SceneDisplay backgroundimage={scene.imagesource} />
-          <TextBox key={scene.id}>
+          <TextBox>
             <p>{scene.textpart}</p>
             <TextBoxButton onClick={() => sceneCounter()} />
           </TextBox>
-        </>
+        </section>
       ))}
       <LinkWrapper>
         <Link href=".">back to home</Link>
