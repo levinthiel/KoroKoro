@@ -9,9 +9,7 @@ export default function OpeningScenePage() {
   const scenesToMap = [scenes[sceneId]];
 
   function sceneCounter() {
-    if (sceneId < scenes.length - 1) {
-      setSceneId(sceneId + 1);
-    }
+    sceneId < scenes.length - 1 && setSceneId(sceneId + 1);
   }
 
   return (
