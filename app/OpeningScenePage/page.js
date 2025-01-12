@@ -1,24 +1,28 @@
 "use client";
-
+import { scenes } from "../lib/data";
 import styled from "styled-components";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function OpeningScenePage() {
+  const [sceneId, setSceneId] = useState(0);
+  const scenesToMap = [scenes[sceneId]];
+
+  function sceneCounter() {
+    sceneId < scenes.length - 1 && setSceneId(sceneId + 1);
+  }
+
   return (
     <Wrapper>
-      <SceneDisplay />
-      <TextBox>
-        <TextBoxButton />
-        <p>
-          In the vast expanse of the universe, there exists a cluster of
-          shimmering nebulas ...
-        </p>
-
-        {/* <p>
-              known as the Hikaru Stellar Hatchery—a birthplace of mysterious, sentient life forms called Korokoro.
-              </p> */}
-      </TextBox>
-
+      {scenesToMap.map((scene) => (
+        <section key={scene.id}>
+          <SceneDisplay backgroundimage={scene.imagesource} />
+          <TextBox>
+            <p>{scene.textpart}</p>
+            <TextBoxButton onClick={() => sceneCounter()} />
+          </TextBox>
+        </section>
+      ))}
       <LinkWrapper>
         <Link href=".">back to home</Link>
       </LinkWrapper>
@@ -41,11 +45,13 @@ const Wrapper = styled.div`
 const SceneDisplay = styled.div`
   width: 100vw;
   height: 370px;
-  background: url(/space1-600.png) center no-repeat;
+  background: ${({ backgroundimage }) => `url(${backgroundimage})`} center
+    no-repeat;
   background-size: cover;
   max-width: 600px;
   min-width: 375px;
   border-radius: 7px;
+  border: solid 2px var(--screen-middle-dark);
 `;
 
 const TextBox = styled.div`
@@ -68,6 +74,7 @@ const TextBox = styled.div`
   }
 `;
 const TextBoxButton = styled.button`
+  cursor: pointer;
   border: none;
   background: url(/arrow.png) no-repeat;
   position: absolute;
@@ -88,7 +95,6 @@ const TextBoxButton = styled.button`
     }
   }
 `;
-
 const LinkWrapper = styled.div`
   color: green;
   background-color: white;
