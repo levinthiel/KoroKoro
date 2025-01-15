@@ -16,9 +16,9 @@ export default function OpeningScenePage() {
     <Wrapper>
       {scenesToMap.map((scene) => (
         <section key={scene.id}>
-          <SceneDisplay backgroundimage={scene.imagesource} />
+          <SceneDisplay backgroundimage={scene.imageSource} />
           <TextBox>
-            <TextBoxText>{scene.textpart}</TextBoxText>
+            <TextBoxText>{scene.textPart}</TextBoxText>
             <TextBoxButton onClick={() => sceneCounter()} />
           </TextBox>
         </section>
