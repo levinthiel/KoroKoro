@@ -16,9 +16,9 @@ export default function OpeningScenePage() {
     <Wrapper>
       {scenesToMap.map((scene) => (
         <section key={scene.id}>
-          <SceneDisplay backgroundimage={scene.imagesource} />
+          <SceneDisplay backgroundimage={scene.imageSource} />
           <TextBox>
-            <p>{scene.textpart}</p>
+            <TextBoxText>{scene.textPart}</TextBoxText>
             <TextBoxButton onClick={() => sceneCounter()} />
           </TextBox>
         </section>
@@ -73,6 +73,10 @@ const TextBox = styled.div`
     background-size: cover;
   }
 `;
+const TextBoxText = styled.p`
+  line-height: 1.7rem;
+`;
+
 const TextBoxButton = styled.button`
   cursor: pointer;
   border: none;
