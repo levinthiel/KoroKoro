@@ -2,7 +2,7 @@ export const scenes = [
   {
     id: 1,
     name: "scene1",
-    textpart: "In a far away corner of the universe, there is a galaxy",
+    textpart: "In a far away corner of the universe, there is a nebula",
     imagesource: "/space1-600.png",
   },
   {
@@ -53,13 +53,13 @@ export const scenes = [
     id: 9,
     name: "scene6",
     textpart:
-      "Together with two friends, you are strolling through a neighbouring forest.",
+      "Together with two friends, you are strolling thorugh a neighbouring forest.",
     imagesource: "/earth2-600.png",
   },
   {
     id: 10,
     name: "scene6",
-    textpart: "When suddenly, you stumble upon the Korokoro eggs.",
+    textpart: "When suddenly, you stumble unto the Korokoro eggs.",
     imagesource: "/earth2-600.png",
   },
   {
