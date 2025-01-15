@@ -18,7 +18,7 @@ export default function OpeningScenePage() {
         <section key={scene.id}>
           <SceneDisplay backgroundimage={scene.imagesource} />
           <TextBox>
-            <p>{scene.textpart}</p>
+            <TextBoxText>{scene.textpart}</TextBoxText>
             <TextBoxButton onClick={() => sceneCounter()} />
           </TextBox>
         </section>
@@ -73,6 +73,10 @@ const TextBox = styled.div`
     background-size: cover;
   }
 `;
+const TextBoxText = styled.p`
+  line-height: 1.7rem;
+`;
+
 const TextBoxButton = styled.button`
   cursor: pointer;
   border: none;
