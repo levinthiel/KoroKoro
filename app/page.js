@@ -44,7 +44,6 @@ export default function Home() {
 }
 
 const Wrapper = styled.div`
-  background-color: #000;
   margin: 0 auto;
   border: 2px solid white;
   min-width: 450px;
@@ -62,9 +61,16 @@ const SplashScreen1 = styled.div`
   animation-name: example1;
   animation-duration: 4s;
   transition: all ease-in-out 0.3s;
+  background-color:  black;
   position: absolute;
   margin: auto;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   @keyframes example1 {
     0% {
@@ -109,10 +115,10 @@ const SplashScreen2 = styled.div`
 `;
  */
 const TitleScreen = styled.div`
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
   opacity: 0;
-  background-color: blue;
+  background-color: transparent;
   position: relative;
   animation-name: example3;
   animation-duration: 1s;
@@ -120,6 +126,7 @@ const TitleScreen = styled.div`
   position: absolute;
   margin: auto;
   animation-fill-mode: forwards;
+  text-align: center;
 
   @keyframes example3 {
     0% {
