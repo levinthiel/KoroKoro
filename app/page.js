@@ -53,7 +53,6 @@ const SplashScreen = styled.div`
   animation-name: example1;
   animation-duration: 4s;
   transition: all ease-in-out 0.3s;
-  background-color:  black;
   position: absolute;
   margin: auto;
   text-align: center;
