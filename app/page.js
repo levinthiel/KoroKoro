@@ -27,16 +27,17 @@ export default function Home() {
         </SplashScreen2> */}
         <TitleScreen>
         <Image
-            src={"/korokorologo.png"}
+            src={"/titlescreen-logo.png"}
             width={300}
             height={300}
             alt="korokoro logo"
           />
+           <Link href="./OpeningScenePage">Opening Scene</Link>
           <br />
           <Link href="./KoroDexPage">KoroDexPage</Link>
           <br />
           <br />
-          <Link href="./OpeningScenePage">Opening Scene</Link>
+         
         </TitleScreen>
       </Wrapper>
     </>
@@ -45,6 +46,7 @@ export default function Home() {
 
 const Wrapper = styled.div`
   margin: 0 auto;
+  background-color: var(--koro-black);
   border: 2px solid white;
   min-width: 450px;
   min-height: 667px;
@@ -118,7 +120,7 @@ const TitleScreen = styled.div`
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: transparent;
+  background: url("/titlescreen-bg.png") center center;
   position: relative;
   animation-name: example3;
   animation-duration: 1s;
@@ -127,6 +129,11 @@ const TitleScreen = styled.div`
   margin: auto;
   animation-fill-mode: forwards;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--koro-black);
+  flex-direction: column;
 
   @keyframes example3 {
     0% {
