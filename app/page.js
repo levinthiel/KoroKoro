@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Wrapper>
-        <SplashScreen1>
+        <SplashScreen>
           <Image
             src={"/spacearcadialogo.png"}
             width={300}
@@ -16,15 +16,7 @@ export default function Home() {
             alt="space arcadia logo"
           />
           <p>presents</p>
-        </SplashScreen1>
-{/*         <SplashScreen2>
-          <Image
-            src={"/korokorologo.png"}
-            width={300}
-            height={300}
-            alt="korokoro logo"
-          />
-        </SplashScreen2> */}
+        </SplashScreen>
         <TitleScreen>
         <Image
             src={"/titlescreen-logo.png"}
@@ -32,12 +24,10 @@ export default function Home() {
             height={300}
             alt="korokoro logo"
           />
-           <Link href="./OpeningScenePage">Opening Scene</Link>
-          <br />
+          <Link href="./OpeningScenePage">
+            <button type="button">Opening Scene</button>
+          </Link>
           <Link href="./KoroDexPage">KoroDexPage</Link>
-          <br />
-          <br />
-         
         </TitleScreen>
       </Wrapper>
     </>
@@ -57,7 +47,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const SplashScreen1 = styled.div`
+const SplashScreen = styled.div`
   opacity: 0;
   position: relative;
   animation-name: example1;
@@ -89,33 +79,6 @@ const SplashScreen1 = styled.div`
     }
   }
 `;
-/* 
-const SplashScreen2 = styled.div`
-  opacity: 0;
-  position: relative;
-  animation-name: example2;
-  animation-duration: 4s;
-  animation-delay: 4s;
-  position: absolute;
-  margin: auto;
-  animation-fill-mode: forwards;
-
-  @keyframes example2 {
-    0% {
-      opacity: 0;
-    }
-    25% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-`;
- */
 const TitleScreen = styled.div`
   width: 100%;
   height: 100%;
