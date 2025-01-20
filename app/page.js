@@ -25,9 +25,13 @@ export default function Home() {
             alt="korokoro logo"
           />
           <Link href="./OpeningScenePage">
-            <button type="button">Opening Scene</button>
+            <StyledTitleScreenButton type="button">Opening Scene</StyledTitleScreenButton>
           </Link>
-          <Link href="./KoroDexPage">KoroDexPage</Link>
+          <Link href="./KoroDexPage">
+            <StyledTitleScreenButton2 type="button">
+              KoroDexPage
+            </StyledTitleScreenButton2>
+          </Link>
         </TitleScreen>
       </Wrapper>
     </>
@@ -104,5 +108,36 @@ const TitleScreen = styled.div`
     100% {
       opacity: 1;
     }
+  }
+`;
+const StyledTitleScreenButton = styled.button `
+  font-family: inherit;
+  padding: 14px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--koro-pink);
+  border: 2px solid var(--koro-pink-dark);
+  transition: 100ms ease;
+  box-shadow: 5px 5px 0 0 var(--koro-pink-dark);
+  color: var(--koro-black);
+
+  &:hover {
+    box-shadow: 2px 2px 0 0 var(--koro-pink-dark);
+  }
+`;
+const StyledTitleScreenButton2 = styled.button `
+  font-family: inherit;
+  padding: 14px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: var(--koro-blue);
+  border: 2px solid var(--koro-blue-dark);
+  transition: 100ms ease;
+  box-shadow: 5px 5px 0 0 var(--koro-blue-dark);
+  color: var(--koro-black);
+  margin-top: 15px;
+
+  &:hover {
+    box-shadow: 2px 2px 0 0 var(--koro-blue-dark);
   }
 `;
