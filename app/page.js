@@ -15,16 +15,23 @@ export default function Home() {
             height={300}
             alt="space arcadia logo"
           />
+          <p>presents</p>
         </SplashScreen1>
-        <SplashScreen2>
+{/*         <SplashScreen2>
           <Image
             src={"/korokorologo.png"}
             width={300}
             height={300}
             alt="korokoro logo"
           />
-        </SplashScreen2>
+        </SplashScreen2> */}
         <TitleScreen>
+        <Image
+            src={"/korokorologo.png"}
+            width={300}
+            height={300}
+            alt="korokoro logo"
+          />
           <br />
           <Link href="./KoroDexPage">KoroDexPage</Link>
           <br />
@@ -57,6 +64,7 @@ const SplashScreen1 = styled.div`
   transition: all ease-in-out 0.3s;
   position: absolute;
   margin: auto;
+  text-align: center;
 
   @keyframes example1 {
     0% {
@@ -73,7 +81,7 @@ const SplashScreen1 = styled.div`
     }
   }
 `;
-
+/* 
 const SplashScreen2 = styled.div`
   opacity: 0;
   position: relative;
@@ -99,7 +107,7 @@ const SplashScreen2 = styled.div`
     }
   }
 `;
-
+ */
 const TitleScreen = styled.div`
   width: 250px;
   height: 250px;
@@ -108,7 +116,7 @@ const TitleScreen = styled.div`
   position: relative;
   animation-name: example3;
   animation-duration: 1s;
-  animation-delay: 8s;
+  animation-delay: 4s;
   position: absolute;
   margin: auto;
   animation-fill-mode: forwards;
