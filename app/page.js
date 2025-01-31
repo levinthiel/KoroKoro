@@ -29,9 +29,9 @@ export default function Home() {
               Opening Scene
             </StyledTitleScreenButton>
           </Link>
-          <Link href="./KoroDexPage">
+          <Link href="./KoroDeckPage">
             <StyledTitleScreenButton2 type="button">
-              KoroDexPage
+              KoroDeckPage
             </StyledTitleScreenButton2>
           </Link>
         </TitleScreen>

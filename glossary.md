@@ -29,7 +29,7 @@ This document contains definitions for aspects of our project, elements of the g
 | opening scene         | cut scene that serves the purpose to introduce the player to the world                                                                  |
 | opening scene display | name of the component containing the opening scene                                                                                      |
 | stage                 | spacial dimension for the gameplay to take place. The space where the player takes care of his KoroKoro would be an example of a stage. |
-| KoroDex               | game UI for the player, name of the component containing the game UI for the player                                                     |
+| KoroDeck              | game UI for the player, name of the component containing the game UI for the player                                                     |
 
 ## Naming Conventions
 

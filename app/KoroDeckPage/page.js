@@ -3,16 +3,16 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-export default function KoroDexPage() {
+export default function KoroDeckPage() {
   return (
     <Wrapper>
-      <KoroDex>
+      <KoroDeck>
         <ScreenShadow>
           <ScreenBezel>
             <Screen></Screen>
           </ScreenBezel>
         </ScreenShadow>
-      </KoroDex>
+      </KoroDeck>
       <LinkWrapper>
         <Link href=".">back to home</Link>
       </LinkWrapper>
@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
 `;
-const KoroDex = styled.div`
+const KoroDeck = styled.div`
   background: radial-gradient(
     circle at 33% 15%,
     #fffdf8 1px,
