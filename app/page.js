@@ -18,14 +18,16 @@ export default function Home() {
           <p>presents</p>
         </SplashScreen>
         <TitleScreen>
-        <Image
+          <Image
             src={"/titlescreen-logo-pixel.png"}
             width={350}
             height={350}
             alt="korokoro logo"
           />
           <Link href="./OpeningScenePage">
-            <StyledTitleScreenButton type="button">Opening Scene</StyledTitleScreenButton>
+            <StyledTitleScreenButton type="button">
+              Opening Scene
+            </StyledTitleScreenButton>
           </Link>
           <Link href="./KoroDexPage">
             <StyledTitleScreenButton2 type="button">
@@ -111,7 +113,7 @@ const TitleScreen = styled.div`
     }
   }
 `;
-const StyledTitleScreenButton = styled.button `
+const StyledTitleScreenButton = styled.button`
   font-family: inherit;
   padding: 14px 22px;
   cursor: pointer;
@@ -124,7 +126,7 @@ const StyledTitleScreenButton = styled.button `
   border-image-slice: 4;
   border-image-width: 2;
   border-image-outset: 0;
-  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M2 2h2v2H2zM4 0h2v2H4zM10 4h2v2h-2zM0 4h2v2H0zM6 0h2v2H6zM8 2h2v2H8zM8 8h2v2H8zM6 10h2v2H6zM0 6h2v2H0zM10 6h2v2h-2zM4 10h2v2H4zM2 8h2v2H2z' fill='currentcolor' /%3E%3C/svg%3E");
+  border-image-source: url("/pixelBorder.svg");
 
   &:hover {
     background: var(--koro-pink-dark);
@@ -134,10 +136,10 @@ const StyledTitleScreenButton = styled.button `
     font-size: medium;
   }
 `;
-const StyledTitleScreenButton2 = styled.button `
+const StyledTitleScreenButton2 = styled.button`
   font-family: inherit;
   padding: 14px 22px;
-  margin-top: 10px ;
+  margin-top: 10px;
   cursor: pointer;
   background: var(--koro-blue);
   transition: 100ms ease;
@@ -148,7 +150,7 @@ const StyledTitleScreenButton2 = styled.button `
   border-image-slice: 4;
   border-image-width: 2;
   border-image-outset: 0;
-  border-image-source: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M2 2h2v2H2zM4 0h2v2H4zM10 4h2v2h-2zM0 4h2v2H0zM6 0h2v2H6zM8 2h2v2H8zM8 8h2v2H8zM6 10h2v2H6zM0 6h2v2H0zM10 6h2v2h-2zM4 10h2v2H4zM2 8h2v2H2z' fill='currentcolor' /%3E%3C/svg%3E");
+  border-image-source: url("/pixelBorder.svg");
 
   &:hover {
     background: var(--koro-blue-dark);
