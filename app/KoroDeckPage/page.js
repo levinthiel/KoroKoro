@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import KoroDeckScreen from "../components/ui/KoroDeckScreen";
 import KoroDeckVentandSound from "../components/ui/KoroDeckVentandSound"
+import KoroDeckEmblem from "../components/ui/KoroDeckEmblem";
 
 export default function KoroDeckPage() {
   return (
@@ -17,9 +18,8 @@ export default function KoroDeckPage() {
         <KoroDeckControls>
 
         </KoroDeckControls>
-        <KoroDeckEmblem>
+        <KoroDeckEmblem/>
 
-        </KoroDeckEmblem>
       </KoroDeck>
       <LinkWrapper>
         <Link href=".">back to home</Link>
@@ -53,9 +53,6 @@ const KoroDeckBranding = styled.section `
   padding: 10px 23px;
 `;
 const KoroDeckControls = styled.section `
-
-`;
-const KoroDeckEmblem = styled.section `
 
 `;
 const LinkWrapper = styled.div`
