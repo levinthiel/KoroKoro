@@ -29,7 +29,7 @@ export default function Home() {
               Opening Scene
             </StyledTitleScreenButton>
           </Link>
-          <Link href="./KoroDeckPage">
+          <Link href="./Kor oDeckPage">
             <StyledTitleScreenButton2 type="button">
               KoroDeckPage
             </StyledTitleScreenButton2>

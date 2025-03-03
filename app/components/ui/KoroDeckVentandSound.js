@@ -37,7 +37,6 @@ const VentandSoundContainer = styled.div`
     padding: 20px;
 `;
 const Vents = styled.ul`
-    list-style: none;
 `;
 const Vent = styled.li`
     width: 145px;
