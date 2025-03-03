@@ -7,11 +7,11 @@ export default function KoroDeckVentandSound() {
     return(
         <VentandSoundContainer>
             <Vents>
-                <Vent></Vent>
-                <Vent></Vent>
-                <Vent></Vent>
-                <Vent></Vent>
-                <Vent></Vent>
+                <Vent/>
+                <Vent/>
+                <Vent/>
+                <Vent/>
+                <Vent/>
             </Vents>
             <Sound>
                 <MuteButton>
