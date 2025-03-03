@@ -7,11 +7,7 @@ export default function KoroDeckVentandSound() {
     return(
         <VentandSoundContainer>
             <Vents>
-                <Vent/>
-                <Vent/>
-                <Vent/>
-                <Vent/>
-                <Vent/>
+            {[1, 2, 3, 4, 5].map((e, index) => (<Vent key={index} />))}
             </Vents>
             <Sound>
                 <MuteButton>
