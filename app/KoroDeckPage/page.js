@@ -2,16 +2,24 @@
 
 import styled from "styled-components";
 import Link from "next/link";
+import KoroDeckScreen from "../components/ui/KoroDeckScreen";
+import KoroDeckVentandSound from "../components/ui/KoroDeckVentandSound"
+import KoroDeckEmblem from "../components/ui/KoroDeckEmblem";
 
 export default function KoroDeckPage() {
   return (
     <Wrapper>
       <KoroDeck>
-        <ScreenShadow>
-          <ScreenBezel>
-            <Screen></Screen>
-          </ScreenBezel>
-        </ScreenShadow>
+        <KoroDeckBranding>
+          <p>KoroDeck 2000</p>
+        </KoroDeckBranding>
+        <KoroDeckScreen/>
+        <KoroDeckVentandSound/>
+        <KoroDeckControls>
+
+        </KoroDeckControls>
+        <KoroDeckEmblem/>
+
       </KoroDeck>
       <LinkWrapper>
         <Link href=".">back to home</Link>
@@ -31,41 +39,21 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 const KoroDeck = styled.div`
-  background: radial-gradient(
-    circle at 33% 15%,
-    #fffdf8 1px,
-    #f9edf3 2%,
-    #89b0d1 40%,
-    #5898cd 63%,
-    #000000 100%
-  );
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  width: 450px;
-  min-width: 450px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: -30px -30px 55px rgba(0, 0, 0, 0.5) inset;
-  border: 1px solid #000;
+  background:#C1C3B7 url('scifibg.png') center center ;              // gameboy grey
+  border-radius: 5px;
+  width: 320px;
+  min-width: 320px;
+  height: 568px;
+  display: grid;
+  grid-template-rows: [row1-start] 36px [row1-end row2-start] 274px [row2-end row3-start] 70px [row3-end row4-start] 80px [row4-end];
+  grid-template-columns: 1;
 `;
-const ScreenShadow = styled.div`
-  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.2);
+const KoroDeckBranding = styled.section `
+  color: var(--koro-black);
+  padding: 10px 23px;
 `;
-const ScreenBezel = styled.div`
-  background-color: #a8c64e;
-  border-radius: 15px;
-  box-shadow: 0 0 1px 3px rgba(10, 10, 10, 0.7);
-`;
-const Screen = styled.div`
-  display: block;
-  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.3);
-  width: 280px;
-  height: 280px;
-  border-radius: 15px;
+const KoroDeckControls = styled.section `
+
 `;
 const LinkWrapper = styled.div`
   color: green;
@@ -73,4 +61,5 @@ const LinkWrapper = styled.div`
   border: 2px solid grey;
   border-radius: 20px;
   padding: 5px;
+  margin-top: 15px;
 `;
