@@ -16,7 +16,6 @@ export default function KoroDeckPage() {
         </KoroDeckBranding>
         <KoroDeckScreen />
         <KoroDeckVentandSound />
-        <KoroDeckControls></KoroDeckControls>
         <ButtonRow />
         <KoroDeckEmblem />
       </KoroDeck>
@@ -51,7 +50,6 @@ const KoroDeckBranding = styled.section`
   color: var(--koro-black);
   padding: 10px 23px;
 `;
-const KoroDeckControls = styled.section``;
 const LinkWrapper = styled.div`
   color: green;
   background-color: white;
