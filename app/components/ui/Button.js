@@ -30,11 +30,12 @@ const StyledButtonProfile = styled.div`
     var(--case-grey) 85%
   );
   box-shadow: -1px 0px 1px #c1c3b7;
-  border: 1px solid var(--case-grey);
   border-radius: 6px;
-  height: 48px;
+  height: 43px;
   width: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  top: -2px;
 `;

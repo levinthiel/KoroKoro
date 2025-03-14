@@ -21,9 +21,9 @@ export default function ButtonRow() {
 
 const StyledButtonRowWrapper = styled.div`
   background-color: var(--case-grey);
-  border: 2px solid var(--case-grey);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
+  // border: 2px solid var(--case-grey); // TODO: DISCUSS: we could also have no bcg and transparent border like rgba(193, 195, 183, 10%)
   border-radius: 9px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
   max-width: 199px;
   max-height: 79px;
   margin-left: 18px;
@@ -33,7 +33,6 @@ const StyledButtonRowWrapper = styled.div`
 
 const StyledButtonRow = styled.div`
   background-color: var(--koro-black);
-  border: 1px solid var(--koro-black);
   border-radius: 5px;
   margin: 0 auto;
   width: 173px;
@@ -42,5 +41,4 @@ const StyledButtonRow = styled.div`
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-evenly;
-  gap: 1px;
 `;
