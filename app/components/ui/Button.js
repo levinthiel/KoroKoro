@@ -21,6 +21,11 @@ const StyledGameControlButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  &:active {
+    transition: all 0.125s ease-out;
+    transform: translate(0px, 2.5px);
+  }
 `;
 
 const StyledButtonProfile = styled.div`

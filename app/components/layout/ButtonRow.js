@@ -29,6 +29,7 @@ const StyledButtonRowWrapper = styled.div`
   margin-left: 18px;
   display: flex;
   align-items: center;
+  z-index: 1;
 `;
 
 const StyledButtonRow = styled.div`
