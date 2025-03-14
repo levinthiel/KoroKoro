@@ -20,8 +20,8 @@ export default function ButtonRow() {
 }
 
 const StyledButtonRowWrapper = styled.div`
-  background-color: #c1c3b7;
-  border: 2px solid #c1c3b7; // game boy grey
+  background-color: var(--case-grey);
+  border: 2px solid var(--case-grey);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
   border-radius: 9px;
   max-width: 199px;

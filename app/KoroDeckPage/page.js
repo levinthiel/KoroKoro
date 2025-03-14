@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 const KoroDeck = styled.div`
-  background: #c1c3b7 url("scifibg.png") center center; // gameboy grey
+  background: var(--case-grey) url("scifibg.png") center center;
   border-radius: 5px;
   width: 320px;
   min-width: 320px;
