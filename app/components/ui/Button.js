@@ -1,13 +1,48 @@
 import styled from "styled-components";
+import Image from "next/image";
 
-// TODO:
-// - nest Image here to display icons properly
-// - add more props
-// - change names of the styled compos (Keycap & ..Profile) and the component itself (e.g. GameControlButton) to better reflect its single-purpose nature
 export default function Button({ label }) {
+  const buttonLabelDictionary = {
+    buttonLabelCollection: [
+      {
+        buttonIdentifier: "feed",
+        buttonLabelIcon: "game-control-food-button-icon.svg",
+        buttonAltText: "feed button",
+      },
+      {
+        buttonIdentifier: "sleep",
+        buttonLabelIcon: "game-control-sleep-button-icon.svg",
+        buttonAltText: "sleep button",
+      },
+      {
+        buttonIdentifier: "enter",
+        buttonLabelIcon: "game-control-enter-button-icon.svg",
+        buttonAltText: "enter button",
+      },
+    ],
+    returnLabelIcon() {
+      const buttonLabelFinder = this.buttonLabelCollection.find(
+        (collectionItem) => collectionItem.buttonIdentifier === label
+      );
+      return buttonLabelFinder ? buttonLabelFinder.buttonLabelIcon : "";
+    },
+    returnAltText() {
+      const altTextFinder = this.buttonLabelCollection.find(
+        (collectionItem) => collectionItem.buttonIdentifier === label
+      );
+      return altTextFinder ? altTextFinder.buttonAltText : "";
+    },
+  };
   return (
     <StyledGameControlButton>
-      <StyledButtonProfile>{label}</StyledButtonProfile>
+      <StyledButtonProfile>
+        <Image
+          src={buttonLabelDictionary.returnLabelIcon()}
+          width={22}
+          height={22}
+          alt={buttonLabelDictionary.returnAltText()}
+        />
+      </StyledButtonProfile>
     </StyledGameControlButton>
   );
 }
