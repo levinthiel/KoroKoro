@@ -3,7 +3,6 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-// TODO: add some css props to unify behavior of this btn and other btn
 export default function KoroDeckVentandSound() {
   return (
     <VentandSoundContainer>
@@ -60,10 +59,6 @@ const MuteButton = styled.button`
   border-radius: 6px;
   background: linear-gradient(to bottom, var(--case-grey), #67687b);
   cursor: pointer;
-  &:active {
-    transition: all 0.125s ease-out;
-    transform: translate(0px, 0.5px);
-  }
 `;
 const IconContainer = styled.div`
   background-color: var(--case-grey);
@@ -71,6 +66,10 @@ const IconContainer = styled.div`
   border-radius: 5px;
   display: flex;
   align-items: center;
+  &:active {
+    transition: all 0.125s ease-out;
+    transform: translate(0px, 0.5px);
+  }
 `;
 const Speaker = styled.div`
   width: 40px;
