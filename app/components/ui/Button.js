@@ -65,6 +65,7 @@ const StyledGameControlButton = styled.button`
   &:active {
     transition: all 0.125s ease-out;
     transform: translate(0px, 1.15px);
+    // box-shadow: 10px 3px 15px #000; // our dark value instead of #000
   }
 `;
 

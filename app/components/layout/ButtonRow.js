@@ -20,10 +20,9 @@ export default function ButtonRow() {
 }
 
 const StyledButtonRowWrapper = styled.div`
-  background-color: var(--case-grey);
-  // border: 2px solid var(--case-grey); // TODO: DISCUSS: we could also have no bcg and transparent border like rgba(193, 195, 183, 10%)
+  background: linear-gradient(to right, rgb(126, 127, 148), rgb(103, 104, 123));
+  border: 2px solid var(--case-grey);
   border-radius: 9px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 25%);
   max-width: 199px;
   max-height: 79px;
   margin-left: 18px;
