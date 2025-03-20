@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from "../ui/Button.js";
+import GameControlButton from "../ui/GameControlButton.js";
 
 const gameControlButtons = [
   { id: 1, label: "feed" },
@@ -7,12 +7,12 @@ const gameControlButtons = [
   { id: 3, label: "enter" },
 ];
 
-export default function ButtonRow() {
+export default function GameControlButtonGroup() {
   return (
     <StyledButtonRowWrapper>
       <StyledButtonRow>
         {gameControlButtons.map((button) => {
-          return <Button key={button.id} label={button.label} />;
+          return <GameControlButton key={button.id} label={button.label} />;
         })}
       </StyledButtonRow>
     </StyledButtonRowWrapper>

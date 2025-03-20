@@ -5,7 +5,7 @@ import Link from "next/link";
 import KoroDeckScreen from "../components/ui/KoroDeckScreen";
 import KoroDeckVentandSound from "../components/ui/KoroDeckVentandSound";
 import KoroDeckEmblem from "../components/ui/KoroDeckEmblem";
-import ButtonRow from "../components/layout/ButtonRow.js";
+import GameControlButtonGroup from "../components/layout/GameControlButtonGroup.js";
 
 export default function KoroDeckPage() {
   return (
@@ -16,7 +16,7 @@ export default function KoroDeckPage() {
         </KoroDeckBranding>
         <KoroDeckScreen />
         <KoroDeckVentandSound />
-        <ButtonRow />
+        <GameControlButtonGroup />
         <KoroDeckEmblem />
       </KoroDeck>
       <LinkWrapper>

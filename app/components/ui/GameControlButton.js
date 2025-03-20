@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-export default function Button({ label }) {
+export default function GameControlButton({ label }) {
   const buttonLabelDictionary = {
     buttonLabelCollection: [
       {
