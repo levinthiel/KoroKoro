@@ -3,8 +3,9 @@
 import styled from "styled-components";
 import Link from "next/link";
 import KoroDeckScreen from "../components/ui/KoroDeckScreen";
-import KoroDeckVentandSound from "../components/ui/KoroDeckVentandSound"
+import KoroDeckVentandSound from "../components/ui/KoroDeckVentandSound";
 import KoroDeckEmblem from "../components/ui/KoroDeckEmblem";
+import GameControlButtonGroup from "../components/layout/GameControlButtonGroup.js";
 
 export default function KoroDeckPage() {
   return (
@@ -13,13 +14,10 @@ export default function KoroDeckPage() {
         <KoroDeckBranding>
           <p>KoroDeck 2000</p>
         </KoroDeckBranding>
-        <KoroDeckScreen/>
-        <KoroDeckVentandSound/>
-        <KoroDeckControls>
-
-        </KoroDeckControls>
-        <KoroDeckEmblem/>
-
+        <KoroDeckScreen />
+        <KoroDeckVentandSound />
+        <GameControlButtonGroup />
+        <KoroDeckEmblem />
       </KoroDeck>
       <LinkWrapper>
         <Link href=".">back to home</Link>
@@ -39,7 +37,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 const KoroDeck = styled.div`
-  background:#C1C3B7 url('scifibg.png') center center ;              // gameboy grey
+  background: var(--case-grey) url("scifibg.png") center center;
   border-radius: 5px;
   width: 320px;
   min-width: 320px;
@@ -48,12 +46,9 @@ const KoroDeck = styled.div`
   grid-template-rows: [row1-start] 36px [row1-end row2-start] 274px [row2-end row3-start] 70px [row3-end row4-start] 80px [row4-end];
   grid-template-columns: 1;
 `;
-const KoroDeckBranding = styled.section `
+const KoroDeckBranding = styled.section`
   color: var(--koro-black);
   padding: 10px 23px;
-`;
-const KoroDeckControls = styled.section `
-
 `;
 const LinkWrapper = styled.div`
   color: green;
